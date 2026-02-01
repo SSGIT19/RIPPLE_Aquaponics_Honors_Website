@@ -1,0 +1,51 @@
+﻿@code {
+    private bool isMenuOpen = false;
+
+    private void ToggleMenu()
+    {
+        isMenuOpen = !isMenuOpen;
+    }
+}
+
+<nav class="topnav">
+    <div class="brand">
+        <a href="/">RIPPLE</a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-links desktop-only">
+        <li><NavLink href="/about">About Us</NavLink></li>
+        <li><NavLink href="/mission">Our Mission</NavLink></li>
+        <li><NavLink href="/aquaponics101">What is Aquaponics?</NavLink></li>
+        <li><NavLink href="/programs">Programs</NavLink></li>
+        <li><NavLink href="/events">Events</NavLink></li>
+        <li><NavLink href="/resources">Resources</NavLink></li>
+        <li><NavLink href="/get-involved">Get Involved</NavLink></li>
+        <li><NavLink href="/donate" class="donate-btn">Donate</NavLink></li>
+        <li><NavLink href="/faq">FAQ</NavLink></li>
+    </ul>
+
+    <!-- Hamburger Icon (mobile only) -->
+    <button class="hamburger mobile-only" @onclick="ToggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer @(isMenuOpen ? "open" : "")">
+    <ul>
+        <li><NavLink href="/about" @onclick="ToggleMenu">About Us</NavLink></li>
+        <li><NavLink href="/mission" @onclick="ToggleMenu">Our Mission</NavLink></li>
+        <li><NavLink href="/aquaponics101" @onclick="ToggleMenu">What is Aquaponics?</NavLink></li>
+        <li><NavLink href="/programs" @onclick="ToggleMenu">Programs</NavLink></li>
+        <li><NavLink href="/events" @onclick="ToggleMenu">Events</NavLink></li>
+        <li><NavLink href="/resources" @onclick="ToggleMenu">Resources</NavLink></li>
+        <li><NavLink href="/get-involved" @onclick="ToggleMenu">Get Involved</NavLink></li>
+        <li><NavLink href="/donate" class="donate-btn" @onclick="ToggleMenu">Donate</NavLink></li>
+        <li><NavLink href="/faq" @onclick="ToggleMenu">FAQ</NavLink></li>
+    </ul>
+</div>
+
+
