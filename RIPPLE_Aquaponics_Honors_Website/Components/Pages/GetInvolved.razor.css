@@ -1,0 +1,97 @@
+﻿section {
+    padding: 3rem 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HERO */
+.gi-hero {
+    background: #0b3d2e;
+    color: white;
+    padding: 4rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+    .gi-hero h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .gi-hero p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+/* SECTIONS */
+.gi-section h2 {
+    color: #0b3d2e;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.gi-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* GRID */
+.gi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gi-card {
+    background: #f7f7f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #0b3d2e;
+}
+
+    .gi-card h3 {
+        margin-bottom: 0.5rem;
+    }
+
+/* CTA */
+.gi-cta {
+    text-align: center;
+}
+
+.gi-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+    .btn.primary {
+        background: #0b3d2e;
+        color: white;
+        border: 2px solid #0b3d2e;
+    }
+
+        .btn.primary:hover {
+            background: white;
+            color: #0b3d2e;
+        }
+
+    .btn.donate {
+        background: #c62828;
+        color: white;
+        border: none;
+    }
+
+        .btn.donate:hover {
+            background: #a61f1f;
+        }
