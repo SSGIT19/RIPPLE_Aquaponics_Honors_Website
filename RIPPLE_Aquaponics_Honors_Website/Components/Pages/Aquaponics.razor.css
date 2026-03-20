@@ -1,0 +1,46 @@
+﻿section {
+    padding: 3rem 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* HERO */
+.aq-hero {
+    background: #0b3d2e;
+    color: white;
+    padding: 4rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+    .aq-hero h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .aq-hero p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+/* SECTIONS */
+.aq-section h2 {
+    color: #0b3d2e;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.aq-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* STEPS */
+.aq-steps {
+    padding-left: 1.2rem;
+    line-height: 1.7;
+}
+
+    .aq-steps li {
+        margin-bottom: 0.75rem;
+    }
