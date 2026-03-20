@@ -1,17 +1,5 @@
 ﻿@page "/faq"
 
-@code {
-    private HashSet<string> openItems = new();
-
-    private void Toggle(string id)
-    {
-        if (openItems.Contains(id))
-            openItems.Remove(id);
-        else
-            openItems.Add(id);
-    }
-}
-
 <section class="faq-hero">
     <h1>Frequently Asked Questions</h1>
     <p>
@@ -20,194 +8,124 @@
     </p>
 </section>
 
-<!-- GENERAL QUESTIONS -->
 <section class="faq-section">
     <h2>General Questions</h2>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q1"))">
-            What is Ripple?
-        </button>
-        @if (openItems.Contains("q1"))
-        {
-            <p class="faq-answer">
-                Ripple is a community‑driven aquaponics initiative working to reduce food insecurity
-                in the Chicagoland area through sustainable, year‑round food production.
-            </p>
-        }
+        <h3>What is Ripple?</h3>
+        <p>
+            Ripple is a community‑driven aquaponics initiative working to reduce food insecurity
+            in the Chicagoland area through sustainable, year‑round food production.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q2"))">
-            What is aquaponics?
-        </button>
-        @if (openItems.Contains("q2"))
-        {
-            <p class="faq-answer">
-                Aquaponics grows fish and plants together in a closed‑loop system. Fish produce nutrients
-                for the plants, and the plants clean the water for the fish.
-            </p>
-        }
+        <h3>What is aquaponics?</h3>
+        <p>
+            Aquaponics grows fish and plants together in a closed‑loop system. Fish produce nutrients
+            for the plants, and the plants clean the water for the fish.
+        </p>
     </div>
 </section>
 
-<!-- FOOD & DISTRIBUTION -->
 <section class="faq-section">
     <h2>Food & Distribution</h2>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q3"))">
-            Is the food free?
-        </button>
-        @if (openItems.Contains("q3"))
-        {
-            <p class="faq-answer">
-                Yes. Our produce and fish are distributed through local food pantries, shelters,
-                and community partners at no cost to families.
-            </p>
-        }
+        <h3>Is the food free?</h3>
+        <p>
+            Yes. Our produce and fish are distributed through local food pantries, shelters,
+            and community partners at no cost to families.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q4"))">
-            What kinds of food do you grow?
-        </button>
-        @if (openItems.Contains("q4"))
-        {
-            <p class="faq-answer">
-                We grow buttercrisp lettuce and other leafy greens, along with Nile tilapia — a hardy,
-                nutritious freshwater fish.
-            </p>
-        }
+        <h3>What kinds of food do you grow?</h3>
+        <p>
+            We grow buttercrisp lettuce and other leafy greens, along with Nile tilapia — a hardy,
+            nutritious freshwater fish.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q5"))">
-            Where does the food go?
-        </button>
-        @if (openItems.Contains("q5"))
-        {
-            <p class="faq-answer">
-                We work with Chicagoland food pantries and community organizations to distribute food
-                directly to neighborhoods facing food insecurity.
-            </p>
-        }
+        <h3>Where does the food go?</h3>
+        <p>
+            We work with Chicagoland food pantries and community organizations to distribute food
+            directly to neighborhoods facing food insecurity.
+        </p>
     </div>
 </section>
 
-<!-- FACILITY & SAFETY -->
 <section class="faq-section">
     <h2>Facility & Safety</h2>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q6"))">
-            Is the facility safe and clean?
-        </button>
-        @if (openItems.Contains("q6"))
-        {
-            <p class="faq-answer">
-                Absolutely. We use strict biosecurity practices, daily water testing, and separate zones
-                for fish, plants, and packaging to ensure food safety.
-            </p>
-        }
+        <h3>Is the facility safe and clean?</h3>
+        <p>
+            Absolutely. We use strict biosecurity practices, daily water testing, and separate zones
+            for fish, plants, and packaging to ensure food safety.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q7"))">
-            Do you use chemicals or pesticides?
-        </button>
-        @if (openItems.Contains("q7"))
-        {
-            <p class="faq-answer">
-                No. Aquaponics relies on natural nutrient cycles, beneficial bacteria, and clean water —
-                not chemical fertilizers or pesticides.
-            </p>
-        }
+        <h3>Do you use chemicals or pesticides?</h3>
+        <p>
+            No. Aquaponics relies on natural nutrient cycles, beneficial bacteria, and clean water —
+            not chemical fertilizers or pesticides.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q8"))">
-            Can I tour the facility?
-        </button>
-        @if (openItems.Contains("q8"))
-        {
-            <p class="faq-answer">
-                Yes! We offer guided tours and educational workshops. Check our Get Involved page for
-                upcoming opportunities.
-            </p>
-        }
+        <h3>Can I tour the facility?</h3>
+        <p>
+            Yes! We offer guided tours and educational workshops. Check our Get Involved page for
+            upcoming opportunities.
+        </p>
     </div>
 </section>
 
-<!-- VOLUNTEERING & EDUCATION -->
 <section class="faq-section">
     <h2>Volunteering & Education</h2>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q9"))">
-            Do I need experience to volunteer?
-        </button>
-        @if (openItems.Contains("q9"))
-        {
-            <p class="faq-answer">
-                No experience needed — we’ll teach you everything. Volunteers help with planting,
-                harvesting, packaging, cleaning, and outreach.
-            </p>
-        }
+        <h3>Do I need experience to volunteer?</h3>
+        <p>
+            No experience needed — we’ll teach you everything. Volunteers help with planting,
+            harvesting, packaging, cleaning, and outreach.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q10"))">
-            Can students or researchers work with Ripple?
-        </button>
-        @if (openItems.Contains("q10"))
-        {
-            <p class="faq-answer">
-                Yes. We welcome collaboration with students, educators, and researchers interested in
-                sustainability, biology, engineering, or community impact.
-            </p>
-        }
+        <h3>Can students or researchers work with Ripple?</h3>
+        <p>
+            Yes. We welcome collaboration with students, educators, and researchers interested in
+            sustainability, biology, engineering, or community impact.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q11"))">
-            Do you offer workshops?
-        </button>
-        @if (openItems.Contains("q11"))
-        {
-            <p class="faq-answer">
-                Yes. We host workshops on aquaponics, sustainability, and community food systems.
-            </p>
-        }
+        <h3>Do you offer workshops?</h3>
+        <p>
+            Yes. We host workshops on aquaponics, sustainability, and community food systems.
+        </p>
     </div>
 </section>
 
-<!-- SUPPORT & DONATIONS -->
 <section class="faq-section">
     <h2>Support & Donations</h2>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q12"))">
-            How can I support Ripple?
-        </button>
-        @if (openItems.Contains("q12"))
-        {
-            <p class="faq-answer">
-                You can volunteer, attend workshops, partner with us, or donate to help expand our impact.
-            </p>
-        }
+        <h3>How can I support Ripple?</h3>
+        <p>
+            You can volunteer, attend workshops, partner with us, or donate to help expand our impact.
+        </p>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question" @onclick="@(() => Toggle("q13"))">
-            Are donations tax‑deductible?
-        </button>
-        @if (openItems.Contains("q13"))
-        {
-            <p class="faq-answer">
-                Ripple is in the process of registering as a 501(c)(3) nonprofit. Once approved, donations
-                will be tax‑deductible.
-            </p>
-        }
+        <h3>Are donations tax‑deductible?</h3>
+        <p>
+            Ripple is in the process of registering as a 501(c)(3) nonprofit. Once approved, donations
+            will be tax‑deductible.
+        </p>
     </div>
 </section>
