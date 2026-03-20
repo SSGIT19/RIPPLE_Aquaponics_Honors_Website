@@ -141,3 +141,73 @@
 
 <!-- VOLUNTEERING & EDUCATION -->
 <section class="faq-section">
+    <h2>Volunteering & Education</h2>
+
+    <div class="faq-item">
+        <button class="faq-question" @onclick="@(() => Toggle("q9"))">
+            Do I need experience to volunteer?
+        </button>
+        @if (openItems.Contains("q9"))
+        {
+            <p class="faq-answer">
+                No experience needed — we’ll teach you everything. Volunteers help with planting,
+                harvesting, packaging, cleaning, and outreach.
+            </p>
+        }
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" @onclick="@(() => Toggle("q10"))">
+            Can students or researchers work with Ripple?
+        </button>
+        @if (openItems.Contains("q10"))
+        {
+            <p class="faq-answer">
+                Yes. We welcome collaboration with students, educators, and researchers interested in
+                sustainability, biology, engineering, or community impact.
+            </p>
+        }
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" @onclick="@(() => Toggle("q11"))">
+            Do you offer workshops?
+        </button>
+        @if (openItems.Contains("q11"))
+        {
+            <p class="faq-answer">
+                Yes. We host workshops on aquaponics, sustainability, and community food systems.
+            </p>
+        }
+    </div>
+</section>
+
+<!-- SUPPORT & DONATIONS -->
+<section class="faq-section">
+    <h2>Support & Donations</h2>
+
+    <div class="faq-item">
+        <button class="faq-question" @onclick="@(() => Toggle("q12"))">
+            How can I support Ripple?
+        </button>
+        @if (openItems.Contains("q12"))
+        {
+            <p class="faq-answer">
+                You can volunteer, attend workshops, partner with us, or donate to help expand our impact.
+            </p>
+        }
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" @onclick="@(() => Toggle("q13"))">
+            Are donations tax‑deductible?
+        </button>
+        @if (openItems.Contains("q13"))
+        {
+            <p class="faq-answer">
+                Ripple is in the process of registering as a 501(c)(3) nonprofit. Once approved, donations
+                will be tax‑deductible.
+            </p>
+        }
+    </div>
+</section>
