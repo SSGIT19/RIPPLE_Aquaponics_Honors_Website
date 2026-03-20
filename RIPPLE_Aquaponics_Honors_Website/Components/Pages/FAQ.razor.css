@@ -1,0 +1,63 @@
+﻿section {
+    padding: 3rem 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* HERO */
+.faq-hero {
+    background: #0b3d2e;
+    color: white;
+    padding: 4rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+    .faq-hero h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .faq-hero p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+/* SECTIONS */
+.faq-section h2 {
+    color: #0b3d2e;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* COLLAPSIBLE ITEMS */
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #f7f7f7;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border-left: 5px solid #0b3d2e;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .faq-question:hover {
+        background: #eaeaea;
+    }
+
+.faq-answer {
+    background: #ffffff;
+    padding: 1rem 1.2rem;
+    border-left: 5px solid #0b3d2e;
+    border-radius: 0 0 8px 8px;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
