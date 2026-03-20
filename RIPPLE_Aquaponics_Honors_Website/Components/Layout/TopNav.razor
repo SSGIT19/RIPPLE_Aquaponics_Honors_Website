@@ -14,15 +14,13 @@
 
     <!-- Desktop Navigation -->
     <ul class="nav-links desktop-only">
-        <li><NavLink href="/about">About Us</NavLink></li>
-        <li><NavLink href="/mission">Our Mission</NavLink></li>
-        <li><NavLink href="/aquaponics101">What is Aquaponics?</NavLink></li>
-        <li><NavLink href="/programs">Programs</NavLink></li>
-        <li><NavLink href="/events">Events</NavLink></li>
-        <li><NavLink href="/resources">Resources</NavLink></li>
+        <li><NavLink href="/about">About</NavLink></li>
+        <li><NavLink href="/aquaponics">Aquaponics</NavLink></li>
+        <li><NavLink href="/facility">Our Facility</NavLink></li>
+        <li><NavLink href="/impact">Impact</NavLink></li>
         <li><NavLink href="/get-involved">Get Involved</NavLink></li>
-        <li><NavLink href="/donate" class="donate-btn">Donate</NavLink></li>
         <li><NavLink href="/faq">FAQ</NavLink></li>
+        <li><NavLink href="/donate" class="donate-btn">Donate</NavLink></li>
     </ul>
 
     <!-- Hamburger Icon (mobile only) -->
@@ -36,16 +34,12 @@
 <!-- Mobile Drawer -->
 <div class="mobile-drawer @(isMenuOpen ? "open" : "")">
     <ul>
-        <li><NavLink href="/about" @onclick="ToggleMenu">About Us</NavLink></li>
-        <li><NavLink href="/mission" @onclick="ToggleMenu">Our Mission</NavLink></li>
-        <li><NavLink href="/aquaponics101" @onclick="ToggleMenu">What is Aquaponics?</NavLink></li>
-        <li><NavLink href="/programs" @onclick="ToggleMenu">Programs</NavLink></li>
-        <li><NavLink href="/events" @onclick="ToggleMenu">Events</NavLink></li>
-        <li><NavLink href="/resources" @onclick="ToggleMenu">Resources</NavLink></li>
+        <li><NavLink href="/about" @onclick="ToggleMenu">About</NavLink></li>
+        <li><NavLink href="/aquaponics" @onclick="ToggleMenu">Aquaponics</NavLink></li>
+        <li><NavLink href="/facility" @onclick="ToggleMenu">Our Facility</NavLink></li>
+        <li><NavLink href="/impact" @onclick="ToggleMenu">Impact</NavLink></li>
         <li><NavLink href="/get-involved" @onclick="ToggleMenu">Get Involved</NavLink></li>
-        <li><NavLink href="/donate" class="donate-btn" @onclick="ToggleMenu">Donate</NavLink></li>
         <li><NavLink href="/faq" @onclick="ToggleMenu">FAQ</NavLink></li>
+        <li><NavLink href="/donate" class="donate-btn" @onclick="ToggleMenu">Donate</NavLink></li>
     </ul>
 </div>
-
-
