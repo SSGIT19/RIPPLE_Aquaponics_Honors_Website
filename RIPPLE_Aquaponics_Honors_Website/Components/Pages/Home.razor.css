@@ -1,6 +1,10 @@
 ﻿/* ========================= */
-/* GLOBAL SECTION SPACING */
+/* GLOBAL BACKGROUND + SPACING */
 /* ========================= */
+body {
+    background: #faf7f5; /* warm off-white */
+}
+
 section {
     padding: 4rem 1.5rem;
     max-width: 1100px;
@@ -8,8 +12,26 @@ section {
 }
 
 /* ========================= */
+/* DIVIDERS (Coral + Blue) */
+/* ========================= */
+.divider-coral {
+    height: 6px;
+    background: #e67e73;
+    border-radius: 3px;
+    margin: 3rem auto;
+    max-width: 200px;
+}
+
+.divider-blue {
+    height: 6px;
+    background: #3a7ca5;
+    border-radius: 3px;
+    margin: 3rem auto;
+    max-width: 200px;
+}
+
+/* ========================= */
 /* ICON STYLING */
-/* Coral for steps, Blue for aquaponics list */
 /* ========================= */
 .step h3 i {
     margin-right: 0.5rem;
@@ -91,17 +113,17 @@ section {
 
     /* CORAL DONATE BUTTON */
     .btn.donate {
-        background: #e67e73; /* coral */
+        background: #e67e73;
         color: white;
         border: none;
     }
 
         .btn.donate:hover {
-            background: #cf6d63; /* darker coral */
+            background: #cf6d63;
         }
 
 /* ========================= */
-/* PROBLEM SECTION */
+/* PROBLEM SECTION (Green) */
 /* ========================= */
 .problem {
     text-align: center;
@@ -116,12 +138,17 @@ section {
     }
 
 /* ========================= */
-/* HOW IT WORKS */
+/* HOW IT WORKS (Pale Coral) */
 /* ========================= */
-.how-it-works h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+.how-it-works {
+    background: #fdecea; /* pale coral */
+    border-radius: 8px;
 }
+
+    .how-it-works h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 
 .steps {
     display: grid;
@@ -130,7 +157,7 @@ section {
 }
 
 .step {
-    background: #f7f7f7;
+    background: white;
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 5px solid #e67e73; /* coral accent */
@@ -141,12 +168,18 @@ section {
     }
 
 /* ========================= */
-/* WHY AQUAPONICS */
+/* WHY AQUAPONICS (Dark Green) */
 /* ========================= */
-.why-aquaponics h2 {
-    text-align: center;
-    margin-bottom: 1rem;
+.why-aquaponics {
+    background: #0b3d2e;
+    color: white;
+    border-radius: 8px;
 }
+
+    .why-aquaponics h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
 
 .benefits {
     list-style: none;
@@ -157,20 +190,20 @@ section {
 
     .benefits li {
         padding: 0.5rem 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
         text-align: center;
     }
 
 /* ========================= */
-/* MISSION */
+/* MISSION (Pale Blue) */
 /* ========================= */
 .mission {
-    background: #f4f4f4;
+    background: #e8f2f8; /* pale blue */
     border-radius: 8px;
 }
 
 /* ========================= */
-/* COMMUNITY */
+/* COMMUNITY (Default Off-White) */
 /* ========================= */
 .community {
     text-align: center;
@@ -181,7 +214,7 @@ section {
     }
 
 /* ========================= */
-/* CTA SECTION */
+/* CTA SECTION (Green) */
 /* ========================= */
 .cta {
     background: #0b3d2e;
