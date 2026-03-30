@@ -7,11 +7,31 @@ section {
     margin: 0 auto;
 }
 
+    /* ========================= */
+    /* ICON STYLING */
+    /* ========================= */
+    section h2 i,
+    .step h3 i,
+    .benefits li i,
+    .community h2 i,
+    .cta h2 i,
+    .cta-buttons i {
+        margin-right: 0.5rem;
+        color: #0b3d2e;
+        font-size: 1.1rem;
+        vertical-align: middle;
+    }
+
+.benefits li i {
+    width: 1.2rem;
+    display: inline-block;
+}
+
 /* ========================= */
 /* HERO SECTION */
 /* ========================= */
 .hero {
-    background: #0b3d2e; /* dark green banner */
+    background: #0b3d2e;
     color: white;
     padding: 6rem 1.5rem;
     text-align: center;
@@ -70,7 +90,7 @@ section {
         }
 
     .btn.donate {
-        background: #c62828; /* red donate button */
+        background: #c62828;
         color: white;
         border: none;
     }
