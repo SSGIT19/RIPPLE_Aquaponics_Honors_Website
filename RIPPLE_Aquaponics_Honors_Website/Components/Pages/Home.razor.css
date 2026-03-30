@@ -1,18 +1,26 @@
 ﻿/* ========================= */
-/* GLOBAL BACKGROUND + SPACING */
+/* GLOBAL BACKGROUND + LAYOUT */
 /* ========================= */
 body {
     background: #faf7f5; /* warm off-white */
+    margin: 0;
+    padding: 0;
 }
 
+/* Sections now span full width */
 section {
-    padding: 4rem 1.5rem;
+    padding: 4rem 0;
+}
+
+/* Inner wrapper keeps content centered */
+.section-inner {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 /* ========================= */
-/* DIVIDERS (Coral + Blue) */
+/* DIVIDERS */
 /* ========================= */
 .divider-coral {
     height: 6px;
@@ -55,7 +63,7 @@ section {
 .hero {
     background: #0b3d2e;
     color: white;
-    padding: 6rem 1.5rem;
+    padding: 6rem 0;
     text-align: center;
 }
 
@@ -126,10 +134,8 @@ section {
 /* PROBLEM SECTION (Green) */
 /* ========================= */
 .problem {
-    text-align: center;
     background: #0b3d2e;
     color: white;
-    border-radius: 8px;
 }
 
     .problem h2 {
@@ -142,7 +148,6 @@ section {
 /* ========================= */
 .how-it-works {
     background: #fdecea; /* pale coral */
-    border-radius: 8px;
 }
 
     .how-it-works h2 {
@@ -173,7 +178,6 @@ section {
 .why-aquaponics {
     background: #0b3d2e;
     color: white;
-    border-radius: 8px;
 }
 
     .why-aquaponics h2 {
@@ -203,9 +207,10 @@ section {
 }
 
 /* ========================= */
-/* COMMUNITY (Default Off-White) */
+/* COMMUNITY FIRST (Pale Blue) */
 /* ========================= */
 .community {
+    background: #e8f2f8; /* pale blue */
     text-align: center;
 }
 
@@ -220,7 +225,6 @@ section {
     background: #0b3d2e;
     color: white;
     text-align: center;
-    border-radius: 8px;
 }
 
 .cta-buttons {
