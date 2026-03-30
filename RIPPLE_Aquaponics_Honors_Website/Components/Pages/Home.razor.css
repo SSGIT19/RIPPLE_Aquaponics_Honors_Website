@@ -8,17 +8,21 @@ section {
 }
 
 /* ========================= */
-/* ICON STYLING (ONLY FOR CARDS + BENEFITS LIST) */
+/* ICON STYLING */
+/* Coral for steps, Blue for aquaponics list */
 /* ========================= */
-.step h3 i,
-.benefits li i {
+.step h3 i {
     margin-right: 0.5rem;
-    color: #0b3d2e;
+    color: #e67e73; /* coral */
     font-size: 1.1rem;
     vertical-align: middle;
 }
 
 .benefits li i {
+    margin-right: 0.5rem;
+    color: #3a7ca5; /* light blue */
+    font-size: 1.1rem;
+    vertical-align: middle;
     width: 1.2rem;
     display: inline-block;
 }
@@ -53,7 +57,7 @@ section {
 }
 
 /* ========================= */
-/* BUTTONS (NO ICONS) */
+/* BUTTONS */
 /* ========================= */
 .btn {
     padding: 0.75rem 1.5rem;
@@ -85,14 +89,15 @@ section {
             color: white;
         }
 
+    /* CORAL DONATE BUTTON */
     .btn.donate {
-        background: #c62828;
+        background: #e67e73; /* coral */
         color: white;
         border: none;
     }
 
         .btn.donate:hover {
-            background: #a61f1f;
+            background: #cf6d63; /* darker coral */
         }
 
 /* ========================= */
@@ -100,7 +105,7 @@ section {
 /* ========================= */
 .problem {
     text-align: center;
-    background: #0b3d2e; /* restored green background */
+    background: #0b3d2e;
     color: white;
     border-radius: 8px;
 }
@@ -128,7 +133,7 @@ section {
     background: #f7f7f7;
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 5px solid #0b3d2e;
+    border-left: 5px solid #e67e73; /* coral accent */
 }
 
     .step h3 {
@@ -192,46 +197,3 @@ section {
     margin-top: 2rem;
     flex-wrap: wrap;
 }
-
-/* ========================= */
-/* ACCENT PREVIEW COLORS */
-/* ========================= */
-
-/* 1. CORAL on How Ripple Works cards */
-.step {
-    border-left: 5px solid #e67e73; /* coral */
-}
-
-/* 2. LIGHT BLUE on Why Aquaponics icons */
-.benefits li i {
-    color: #3a7ca5; /* light blue */
-}
-
-/* 3. GOLD on Community First heading underline + button */
-.community h2 {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 0.3rem;
-}
-
-    .community h2::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 60%;
-        height: 3px;
-        background: #d4a017; /* gold */
-        margin: 0 auto;
-    }
-
-.community .btn.primary {
-    border: 2px solid #d4a017; /* gold border */
-    color: #d4a017;
-    background: white;
-}
-
-    .community .btn.primary:hover {
-        background: #d4a017;
-        color: white;
-    }
