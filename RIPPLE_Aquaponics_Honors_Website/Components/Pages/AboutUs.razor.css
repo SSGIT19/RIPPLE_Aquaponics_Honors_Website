@@ -21,17 +21,56 @@ section {
 /* ========================= */
 .hero,
 .why-aquaponics {
-    background: #0b3d2e;
+    background: #0b3d2e; /* dark green */
     color: white;
 }
 
 .pale-coral {
-    background: #fdecea;
+    background: #fdecea; /* pale coral */
 }
 
 .pale-blue {
-    background: #e8f2f8;
+    background: #e8f2f8; /* pale blue */
 }
+
+/* ========================= */
+/* SECTION DIVIDERS */
+/* ========================= */
+.divider-coral {
+    height: 6px;
+    background: #e67e73; /* coral */
+    border-radius: 3px;
+    margin: 3rem auto;
+    max-width: 200px;
+}
+
+.divider-blue {
+    height: 6px;
+    background: #3a7ca5; /* blue */
+    border-radius: 3px;
+    margin: 3rem auto;
+    max-width: 200px;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+.hero {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+    .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 750px;
+        margin: 0.5rem auto 2rem auto;
+        line-height: 1.6;
+    }
 
 /* ========================= */
 /* ICON LISTS */
@@ -52,22 +91,14 @@ section {
 
         .icon-list li i {
             margin-right: 0.5rem;
-            color: #0b3d2e;
+            color: #0b3d2e; /* dark green */
             width: 1.2rem;
             display: inline-block;
         }
 
 /* ========================= */
-/* HERO */
+/* WHY AQUAPONICS SECTION */
 /* ========================= */
-.hero h1 {
-    font-size: 2.6rem;
+.why-aquaponics h2 {
     margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 750px;
-    margin: 0.5rem auto 0 auto;
-    line-height: 1.6;
 }
