@@ -1,43 +1,73 @@
-﻿section {
-    padding: 3rem 1.5rem;
-    max-width: 900px;
-    margin: 0 auto;
+﻿/* ========================= */
+/* SECTION LAYOUT */
+/* ========================= */
+section {
+    padding: 4rem 0;
 }
 
-.about-hero {
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+    .section-inner h2,
+    .section-inner p {
+        text-align: center;
+    }
+
+/* ========================= */
+/* COLOR BACKGROUNDS */
+/* ========================= */
+.hero,
+.why-aquaponics {
     background: #0b3d2e;
     color: white;
-    padding: 4rem 1.5rem;
-    border-radius: 8px;
-    text-align: center;
 }
 
-    .about-hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
+.pale-coral {
+    background: #fdecea;
+}
 
-    .about-hero p {
-        font-size: 1.2rem;
+.pale-blue {
+    background: #e8f2f8;
+}
+
+/* ========================= */
+/* ICON LISTS */
+/* ========================= */
+.icon-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+    .icon-list li {
+        margin: 0.75rem 0;
+        font-size: 1.1rem;
         line-height: 1.6;
+        text-align: center;
     }
 
-.about-section h2 {
+        .icon-list li i {
+            margin-right: 0.5rem;
+            color: #0b3d2e;
+            width: 1.2rem;
+            display: inline-block;
+        }
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+.hero h1 {
+    font-size: 2.6rem;
     margin-bottom: 1rem;
-    font-size: 1.8rem;
-    color: #0b3d2e;
 }
 
-.about-section p {
-    margin-bottom: 1rem;
+.hero p {
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0.5rem auto 0 auto;
     line-height: 1.6;
-}
-
-.about-section ul {
-    padding-left: 1.2rem;
-    line-height: 1.6;
-}
-
-.about-section li {
-    margin-bottom: 0.5rem;
 }
