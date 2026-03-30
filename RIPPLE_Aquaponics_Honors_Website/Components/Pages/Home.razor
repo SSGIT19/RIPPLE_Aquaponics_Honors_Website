@@ -98,3 +98,46 @@
         <a href="/about" class="btn primary">Learn More</a>
     </div>
 </section>
+
+        /* ========================= */
+/* ACCENT PREVIEW COLORS */
+/* ========================= */
+
+/* 1. CORAL on How Ripple Works cards */
+.step {
+    border-left: 5px solid #e67e73; /* coral */
+}
+
+/* 2. LIGHT BLUE on Why Aquaponics icons */
+.benefits li i {
+    color: #3a7ca5; /* light blue */
+}
+
+/* 3. GOLD on Community First heading underline + button */
+.community h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.community h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    height: 3px;
+    background: #d4a017; /* gold */
+    margin: 0 auto;
+}
+
+.community .btn.primary {
+    border: 2px solid #d4a017; /* gold border */
+    color: #d4a017;
+    background: white;
+}
+
+.community .btn.primary:hover {
+    background: #d4a017;
+    color: white;
+}
