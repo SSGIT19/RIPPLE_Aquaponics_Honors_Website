@@ -31,6 +31,7 @@
     text-align: center;
 }
 
+/* Center paragraphs but keep lists visually aligned */
 .contact-section p {
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -40,18 +41,20 @@
     text-align: center;
 }
 
+/* LISTS — centered container, left-aligned items */
 .contact-section ul {
     max-width: 800px;
-    margin: 1rem auto;
-    line-height: 1.6;
+    margin: 1.5rem auto;
+    padding-left: 1.2rem;
     text-align: left;
+    line-height: 1.6;
 }
 
 .contact-section li {
     margin-bottom: 0.5rem;
 }
 
-/* OPTIONAL CARD STYLE (if you add cards later) */
+/* OPTIONAL CARD STYLE */
 .contact-card {
     background: #f7f7f7;
     padding: 1.5rem;
@@ -65,7 +68,7 @@
         margin-bottom: 0.5rem;
     }
 
-/* BUTTONS (same as other pages) */
+/* BUTTONS */
 .btn {
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
