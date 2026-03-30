@@ -1,141 +1,181 @@
-﻿@page
-"/"
-<!-- ========================= -->
-<!-- HERO -->
-<!-- ========================= -->
-<section class="hero" >
-<div class="section-inner" >
-<h1 > Ripple Aquaponics</h1 >
-<p >
-A conceptual model exploring how sustainable, community‑focused food systems
-could support Chicago‑area neighborhoods year‑round.
-</p >
+﻿/* ========================= */
+/* SECTION LAYOUT */
+/* ========================= */
+section {
+    padding: 4rem 0;
+}
 
-<div class="hero-buttons" >
-<a href="/about" class="btn primary" > Learn More</a >
-<a href="/get-involved" class="btn secondary" > Get Involved</a >
-<a href="/donate" class="btn donate" > Donate (Demo)</a >
-</div >
-</div >
-</section >
-<!-- ========================= -->
-<!-- PROBLEM SECTION -->
-<!-- ========================= -->
-<section class="problem" >
-<div class="section-inner" >
-<h2 > The Challenge</h2 >
-<p >
-Many Chicago‑area neighborhoods experience limited access to fresh produce, rising food costs,
-and harsh seasonal conditions that make year‑round growing difficult. This project uses
-Chicagoland as a case study to explore how sustainable systems like aquaponics could help
-address these challenges.
-</p >
-</div >
-</section >
-<!-- ========================= -->
-<!-- HOW RIPPLE WORKS -->
-<!-- ========================= -->
-<section class="how-it-works" >
-<div class="section-inner" >
-<h2 > How Ripple Works (Conceptual Model)</h2 >
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
 
-<div class="steps" >
-<div class="step" >
-<h3 > <i class="fa-solid fa-fish" > </i > 1. We raise fish.</h3 >
-<p >
-In the modeled system, Nile tilapia produce nutrient‑rich waste that forms the basis
-of plant growth. This reflects real aquaponic practices.
-</p >
-</div >
+    .section-inner h2,
+    .section-inner p {
+        text-align: center;
+    }
 
-<div class="step" >
-<h3 > <i class="fa-solid fa-leaf" > </i > 2. We grow plants.</h3 >
-<p >
-Buttercrisp lettuce and other leafy greens are used as examples of crops that thrive
-in aquaponic environments. These crops are part of the conceptual design only.
-</p >
-</div >
+/* ========================= */
+/* COLOR BACKGROUNDS */
+/* ========================= */
+.hero,
+.why-aquaponics,
+.cta {
+    background: #0b3d2e; /* dark green */
+    color: white;
+}
 
-<div class="step" >
-<h3 > <i class="fa-solid fa-hand-holding-heart" > </i > 3. We feed the community.</h3 >
-<p >
-In this project model, produce and fish are imagined as being distributed through
-food pantries and community partners. This distribution network is hypothetical and
-included to demonstrate how a real nonprofit might operate.
-</p >
-</div >
-</div >
-</div >
-</section >
+.pale-coral {
+    background: #fdecea; /* pale coral */
+}
 
-<div class="divider-coral" > </div >
-<!-- ========================= -->
-<!-- WHY AQUAPONICS -->
-<!-- ========================= -->
-<section class="why-aquaponics" >
-<div class="section-inner" >
-<h2 > Why Aquaponics?</h2 >
-<p >
-Aquaponics is a closed‑loop system that recycles water, conserves resources, and produces
-nutrient‑dense food efficiently. This project uses aquaponics as a framework to explore
-sustainable, scalable solutions for urban food systems.
-</p >
+.pale-blue {
+    background: #e8f2f8; /* pale blue */
+}
 
-<ul class="benefits" >
-<li > <i class="fa-solid fa-calendar" > </i > Operates year‑round in controlled environments</li >
-<li > <i class="fa-solid fa-droplet" > </i > Uses significantly less water and land</li >
-<li > <i class="fa-solid fa-truck" > </i > Reduces reliance on long‑distance supply chains</li >
-<li > <i class="fa-solid fa-seedling" > </i > Provides predictable, high‑quality harvests</li >
-<li > <i class="fa-solid fa-people-group" > </i > Supports community education and engagement</li >
-</ul >
-</div >
-</section >
+/* ========================= */
+/* HERO */
+/* ========================= */
+.hero {
+    padding: 6rem 0;
+    text-align: center;
+}
 
-<div class="divider-blue" > </div >
-<!-- ========================= -->
-<!-- MISSION -->
-<!-- ========================= -->
-<section class="mission" >
-<div class="section-inner" >
-<h2 > Our Mission (Conceptual)</h2 >
-<p >
-Ripple imagines a future where sustainable food systems are accessible, community‑driven,
-and environmentally responsible. This project models how aquaponics could support local
-resilience and education.
-</p >
-</div >
-</section >
-<!-- ========================= -->
-<!-- COMMUNITY FIRST -->
-<!-- ========================= -->
-<section class="community" >
-<div class="section-inner" >
-<h2 > Community First (Conceptual)</h2 >
-<p >
-In this project, Ripple is imagined as a community‑driven effort where volunteers, students,
-and researchers collaborate to support sustainable food systems. These roles are hypothetical
-and included to demonstrate how community engagement might look in a real implementation.
-</p >
+    .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
 
-<a href="/get-involved" class="btn primary" > Get Involved</a >
-</div >
-</section >
-<!-- ========================= -->
-<!-- CTA SECTION -->
-<!-- ========================= -->
-<section class="cta" >
-<div class="section-inner" >
-<h2 > Help Us Grow the Ripple Effect</h2 >
-<p >
-This project highlights the potential of sustainable, community‑focused food systems.
-Explore the site to learn more about the model, the research behind it, and how a real
-nonprofit could bring these ideas to life.
-</p >
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 750px;
+        margin: 0.5rem auto 2rem auto;
+        line-height: 1.6;
+    }
 
-<div class="cta-buttons" >
-<a href="/donate" class="btn donate" > Donate (Demo)</a >
-<a href="/get-involved" class="btn secondary" > Volunteer (Conceptual)</a >
-<a href="/about" class="btn primary" > Learn More</a >
-</div >
-</div >
-</section >
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+    .btn.primary {
+        background: #0b3d2e;
+        color: white;
+        border: 2px solid white;
+    }
+
+        .btn.primary:hover {
+            background: white;
+            color: #0b3d2e;
+        }
+
+    .btn.secondary {
+        background: white;
+        color: #0b3d2e;
+        border: 2px solid #0b3d2e;
+    }
+
+        .btn.secondary:hover {
+            background: #0b3d2e;
+            color: white;
+        }
+
+    .btn.donate {
+        background: #e67e73; /* coral */
+        color: white;
+        border: none;
+    }
+
+        .btn.donate:hover {
+            background: #cf6d63; /* darker coral */
+        }
+
+/* ========================= */
+/* HOW IT WORKS */
+/* ========================= */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #e67e73; /* coral */
+}
+
+    .step h3 {
+        margin-bottom: 0.5rem;
+    }
+
+        .step h3 i {
+            margin-right: 0.5rem;
+            color: #e67e73;
+            font-size: 1.1rem;
+        }
+
+/* ========================= */
+/* WHY AQUAPONICS */
+/* ========================= */
+.why-aquaponics h2 {
+    margin-bottom: 1rem;
+}
+
+.benefits {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 1.5rem auto;
+}
+
+    .benefits li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        text-align: center;
+    }
+
+        .benefits li i {
+            margin-right: 0.5rem;
+            color: #3a7ca5; /* blue */
+            font-size: 1.1rem;
+            width: 1.2rem;
+            display: inline-block;
+        }
+
+/* ========================= */
+/* COMMUNITY */
+/* ========================= */
+.community .btn {
+    margin-top: 1.5rem;
+}
+
+/* ========================= */
+/* CTA */
+/* ========================= */
+.cta {
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
