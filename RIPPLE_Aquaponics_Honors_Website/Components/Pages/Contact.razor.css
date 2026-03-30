@@ -5,7 +5,7 @@
 }
 
 /* HERO */
-.gi-hero {
+.contact-hero {
     background: #0b3d2e;
     color: white;
     padding: 4rem 1.5rem;
@@ -13,25 +13,25 @@
     text-align: center;
 }
 
-    .gi-hero h1 {
+    .contact-hero h1 {
         font-size: 2.4rem;
         margin-bottom: 1rem;
     }
 
-    .gi-hero p {
+    .contact-hero p {
         font-size: 1.15rem;
         line-height: 1.6;
     }
 
 /* SECTIONS */
-.gi-section h2 {
+.contact-section h2 {
     color: #0b3d2e;
     margin-bottom: 1rem;
     font-size: 1.8rem;
     text-align: center;
 }
 
-.gi-section p {
+.contact-section p {
     line-height: 1.6;
     margin-bottom: 1rem;
     max-width: 800px;
@@ -40,47 +40,32 @@
     text-align: center;
 }
 
-/* GRID */
-.gi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    justify-items: center;
+.contact-section ul {
+    max-width: 800px;
+    margin: 1rem auto;
+    line-height: 1.6;
+    text-align: left;
 }
 
-.gi-card {
+.contact-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* OPTIONAL CARD STYLE (if you add cards later) */
+.contact-card {
     background: #f7f7f7;
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 5px solid #0b3d2e;
+    margin-bottom: 1.5rem;
     text-align: left;
-    max-width: 100%;
 }
 
-    .gi-card h3 {
+    .contact-card h3 {
         margin-bottom: 0.5rem;
     }
 
-/* CTA */
-.gi-cta {
-    text-align: center;
-}
-
-    .gi-cta p {
-        max-width: 800px;
-        margin: 0.75rem auto;
-    }
-
-.gi-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-}
-
-/* BUTTONS */
+/* BUTTONS (same as other pages) */
 .btn {
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
