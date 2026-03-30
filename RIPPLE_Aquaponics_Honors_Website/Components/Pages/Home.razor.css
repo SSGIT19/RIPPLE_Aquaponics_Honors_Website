@@ -70,11 +70,9 @@ section {
     text-decoration: none;
     font-weight: 600;
     transition: 0.2s ease;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
+    /* Primary */
     .btn.primary {
         background: #0b3d2e;
         color: white;
@@ -86,6 +84,7 @@ section {
             color: #0b3d2e;
         }
 
+    /* Secondary */
     .btn.secondary {
         background: white;
         color: #0b3d2e;
@@ -97,6 +96,7 @@ section {
             color: white;
         }
 
+    /* Donate */
     .btn.donate {
         background: #e67e73; /* coral */
         color: white;
@@ -166,6 +166,13 @@ section {
 /* ========================= */
 .community .btn {
     margin-top: 1.5rem;
+}
+
+/* Center ONLY the single button in Community First */
+.pale-blue .section-inner > .btn {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    text-align: center;
 }
 
 /* ========================= */
