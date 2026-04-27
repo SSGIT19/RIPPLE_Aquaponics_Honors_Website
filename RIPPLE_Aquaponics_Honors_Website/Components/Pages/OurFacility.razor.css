@@ -110,3 +110,16 @@ section {
     margin-bottom: 0.75rem;
     display: block;
 }
+
+.facility-layout-image {
+    text-align: center;
+    margin: 2.5rem auto;
+}
+
+    .facility-layout-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
