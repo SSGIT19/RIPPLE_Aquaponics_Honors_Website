@@ -73,31 +73,56 @@ section {
     }
 
 /* ========================= */
-/* CARD STEPS */
+/* CIRCULAR LOOP TIMELINE */
 /* ========================= */
-.steps {
+
+.cycle-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
+    position: relative;
+    margin: 3rem auto;
+    max-width: 1000px;
 }
 
-.step {
+/* Step cards */
+.cycle-step {
     background: white;
     padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 5px solid #e67e73;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-top: 6px solid #e67e73;
+    position: relative;
+    z-index: 2;
 }
 
-    .step h3 {
-        margin-bottom: 0.5rem;
-    }
+.cycle-icon {
+    font-size: 2rem;
+    color: #e67e73;
+    margin-bottom: 0.75rem;
+}
 
-        .step h3 i {
-            margin-right: 0.5rem;
-            color: #e67e73;
-            font-size: 1.1rem;
-        }
+/* Circular dashed loop */
+.cycle-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    height: 85%;
+    transform: translate(-50%, -50%);
+    border: 4px dashed #0b3d2e;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Note under timeline */
+.cycle-note {
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
+}
 
 /* ========================= */
 /* ICON LISTS */
@@ -122,3 +147,24 @@ section {
             width: 1.2rem;
             display: inline-block;
         }
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 800px) {
+
+    .cycle-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+        .cycle-container::before {
+            display: none;
+        }
+
+    .cycle-step {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
