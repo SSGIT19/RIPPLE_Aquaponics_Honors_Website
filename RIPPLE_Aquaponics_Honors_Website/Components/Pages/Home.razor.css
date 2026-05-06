@@ -11,9 +11,16 @@ section {
     padding: 0 1.5rem;
 }
 
-    .section-inner h2,
-    .section-inner p {
+    /* FIX: Only center section titles, not all text */
+    .section-inner h2 {
         text-align: center;
+    }
+
+    .section-inner p {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 750px;
     }
 
 /* ========================= */
@@ -22,16 +29,16 @@ section {
 .hero,
 .why-aquaponics,
 .cta {
-    background: #0b3d2e; /* dark green */
+    background: #0b3d2e;
     color: white;
 }
 
 .pale-coral {
-    background: #fdecea; /* pale coral */
+    background: #fdecea;
 }
 
 .pale-blue {
-    background: #e8f2f8; /* pale blue */
+    background: #e8f2f8;
 }
 
 /* ========================= */
@@ -52,6 +59,7 @@ section {
         max-width: 750px;
         margin: 0.5rem auto 2rem auto;
         line-height: 1.6;
+        text-align: center; /* Hero stays centered */
     }
 
 .hero-buttons {
@@ -98,17 +106,17 @@ section {
 
     /* Donate */
     .btn.donate {
-        background: #e67e73; /* coral */
+        background: #e67e73;
         color: white;
         border: none;
     }
 
         .btn.donate:hover {
-            background: #cf6d63; /* darker coral */
+            background: #cf6d63;
         }
 
 /* ========================= */
-/* HOW IT WORKS */
+/* HOW RIPPLE WORKS */
 /* ========================= */
 .steps {
     display: grid;
@@ -120,7 +128,8 @@ section {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 5px solid #e67e73; /* coral */
+    border-left: 5px solid #e67e73;
+    text-align: left; /* FIX: prevents drift */
 }
 
     .step h3 {
@@ -150,25 +159,20 @@ section {
     .benefits li {
         padding: 0.5rem 0;
         border-bottom: 1px solid rgba(255,255,255,0.2);
-        text-align: center;
+        text-align: left; /* FIX: aligns icons + text */
     }
 
         .benefits li i {
             margin-right: 0.5rem;
-            color: #3a7ca5; /* blue */
+            color: #3a7ca5;
             font-size: 1.1rem;
             width: 1.2rem;
             display: inline-block;
         }
 
 /* ========================= */
-/* COMMUNITY */
+/* COMMUNITY FIRST */
 /* ========================= */
-.community .btn {
-    margin-top: 1.5rem;
-}
-
-/* Center ONLY the single button in Community First */
 .pale-blue .section-inner > .btn {
     display: block;
     margin: 1.5rem auto 0 auto;
@@ -182,6 +186,10 @@ section {
     text-align: center;
 }
 
+    .cta p {
+        text-align: center;
+    }
+
 .cta-buttons {
     display: flex;
     justify-content: center;
@@ -190,6 +198,9 @@ section {
     flex-wrap: wrap;
 }
 
+/* ========================= */
+/* Z-INDEX FIXES */
+/* ========================= */
 section {
     position: relative;
     z-index: 1;
@@ -198,4 +209,39 @@ section {
 .hero {
     position: relative;
     z-index: 10;
+}
+
+/* ========================= */
+/* MOBILE FIXES */
+/* ========================= */
+@media (max-width: 600px) {
+
+    /* Ensure cards are perfectly centered */
+    .steps {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .step {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 420px; /* keeps cards centered visually */
+    }
+
+    .benefits {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+        .benefits li {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 420px;
+        }
+
+    .section-inner p {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 }
