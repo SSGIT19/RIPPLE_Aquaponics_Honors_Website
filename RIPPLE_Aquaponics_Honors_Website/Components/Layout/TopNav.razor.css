@@ -11,6 +11,8 @@
     color: white;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 2000; /* ensure nav is always clickable */
 }
 
     .topnav a {
@@ -72,17 +74,22 @@
 .mobile-drawer {
     position: fixed;
     top: 0;
-    right: -260px;
+    right: 0;
     width: 260px;
     height: 100%;
     background-color: #0a4d3c;
     padding-top: 4rem;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease;
     z-index: 1000;
+    /* Prevent blocking clicks when closed */
+    pointer-events: none;
+    /* Move fully off-screen */
+    transform: translateX(260px);
 }
 
     .mobile-drawer.open {
-        right: 0;
+        transform: translateX(0);
+        pointer-events: auto; /* clickable only when open */
     }
 
     .mobile-drawer ul {
@@ -161,19 +168,4 @@
 
     .topnav .nav-links a.active {
         border-bottom: 2px solid white;
-    }
-
-/* Ensure nav is always clickable */
-.topnav {
-    position: relative;
-    z-index: 2000;
-}
-
-/* Prevent drawer from blocking hamburger when closed */
-.mobile-drawer {
-    pointer-events: none;
-}
-
-    .mobile-drawer.open {
-        pointer-events: auto;
     }
