@@ -1,6 +1,7 @@
-﻿/* TODO: change text in top nav to white */
+﻿/* ========================= */
+/* BASE NAV STYLING */
+/* ========================= */
 
-/* Base nav styling */
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -18,12 +19,16 @@
         font-weight: 600;
     }
 
+/* Brand */
 .brand a {
-    margin-right: 2rem; /* adds space between RIPPLE and the nav links */
+    margin-right: 2rem;
     font-size: 1.25rem;
 }
 
-/* Desktop nav */
+/* ========================= */
+/* DESKTOP NAV */
+/* ========================= */
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -40,12 +45,15 @@
     color: #fff !important;
 }
 
-/* Hamburger icon */
+/* ========================= */
+/* HAMBURGER ICON */
+/* ========================= */
+
 .hamburger {
     background: none;
     border: none;
     cursor: pointer;
-    display: flex;
+    display: none; /* hidden on desktop */
     flex-direction: column;
     gap: 4px;
 }
@@ -57,7 +65,10 @@
         border-radius: 2px;
     }
 
-/* Mobile drawer */
+/* ========================= */
+/* MOBILE DRAWER */
+/* ========================= */
+
 .mobile-drawer {
     position: fixed;
     top: 0;
@@ -89,7 +100,10 @@
         font-size: 1.1rem;
     }
 
-/* Responsive behavior */
+/* ========================= */
+/* RESPONSIVE BEHAVIOR */
+/* ========================= */
+
 .desktop-only {
     display: flex;
 }
@@ -99,16 +113,38 @@
 }
 
 @media (max-width: 768px) {
+
+    /* Hide desktop nav */
     .desktop-only {
         display: none;
     }
 
+    /* Show hamburger */
     .mobile-only {
         display: block;
     }
+
+    /* Prevent overflow */
+    .topnav {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    /* Ensure nav links don't push layout */
+    .nav-links {
+        display: none;
+    }
+
+    /* Ensure hamburger is visible */
+    .hamburger {
+        display: flex;
+    }
 }
 
-/* Force all nav links to stay white */
+/* ========================= */
+/* FORCE NAV LINKS WHITE */
+/* ========================= */
+
 .topnav .nav-links a,
 .topnav .nav-links a:visited,
 .topnav .nav-links a:hover,
@@ -123,8 +159,6 @@
     color: white !important;
 }
 
-    /* Optional: underline active link */
     .topnav .nav-links a.active {
         border-bottom: 2px solid white;
     }
-

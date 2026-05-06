@@ -102,3 +102,43 @@ section {
 .why-aquaponics h2 {
     margin-bottom: 1rem;
 }
+
+/* ========================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================= */
+@media (max-width: 600px) {
+
+    /* Reduce large hero text */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    /* Improve paragraph readability */
+    .section-inner p {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* Improve icon list layout */
+    .icon-list li {
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 1rem;
+    }
+
+        .icon-list li i {
+            margin-top: 0.2rem;
+        }
+
+    /* Reduce section padding so mobile isn't too tall */
+    section {
+        padding: 2.5rem 0;
+    }
+}
