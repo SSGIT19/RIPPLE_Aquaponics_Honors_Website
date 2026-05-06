@@ -11,9 +11,17 @@ section {
     padding: 0 1.5rem;
 }
 
-    .section-inner h2,
-    .section-inner p {
+    /* FIX: Only center section titles */
+    .section-inner h2 {
         text-align: center;
+    }
+
+    /* FIX: Left-align body text for readability + mobile balance */
+    .section-inner p {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 750px;
     }
 
 /* ========================= */
@@ -21,16 +29,16 @@ section {
 /* ========================= */
 .hero,
 .why-aquaponics {
-    background: #0b3d2e; /* dark green */
+    background: #0b3d2e;
     color: white;
 }
 
 .pale-coral {
-    background: #fdecea; /* pale coral */
+    background: #fdecea;
 }
 
 .pale-blue {
-    background: #e8f2f8; /* pale blue */
+    background: #e8f2f8;
 }
 
 /* ========================= */
@@ -70,6 +78,7 @@ section {
         max-width: 750px;
         margin: 0.5rem auto 2rem auto;
         line-height: 1.6;
+        text-align: center; /* Hero stays centered */
     }
 
 /* ========================= */
@@ -80,19 +89,21 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    justify-items: center; /* FIX: centers cards */
     position: relative;
     margin: 3rem auto;
     max-width: 1000px;
 }
 
-/* Step cards */
 .cycle-step {
     background: white;
     padding: 1.5rem;
     border-radius: 12px;
-    text-align: center;
+    text-align: left; /* FIX: prevents drift */
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     border-top: 6px solid #e67e73;
+    width: 100%;
+    max-width: 420px; /* FIX: keeps cards centered */
     position: relative;
     z-index: 2;
 }
@@ -117,7 +128,6 @@ section {
     z-index: 0;
 }
 
-/* Note under timeline */
 .cycle-note {
     text-align: center;
     margin-top: 2rem;
@@ -138,7 +148,10 @@ section {
         margin: 0.75rem 0;
         font-size: 1.1rem;
         line-height: 1.6;
-        text-align: center;
+        text-align: left; /* FIX: aligns icons + text */
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
         .icon-list li i {
@@ -163,8 +176,13 @@ section {
         }
 
     .cycle-step {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 420px;
+    }
+
+    .section-inner p {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
