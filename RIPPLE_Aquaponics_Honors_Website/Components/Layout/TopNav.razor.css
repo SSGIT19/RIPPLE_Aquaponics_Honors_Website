@@ -105,9 +105,15 @@
     }
 }
 
-/* Make all nav links white on desktop + mobile */
-.topnav a,
-.nav-links a,
-.nav-links li a {
+/* Force ALL nav links to be white, no matter what */
+.topnav a:link,
+.topnav a:visited,
+.topnav a:hover,
+.topnav a:active,
+.nav-links a:link,
+.nav-links a:visited,
+.nav-links a:hover,
+.nav-links a:active {
     color: white !important;
 }
+
