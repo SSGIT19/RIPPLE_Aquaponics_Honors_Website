@@ -1,18 +1,12 @@
-﻿/* ========================= */
-/* BASE NAV STYLING */
-/* ========================= */
-
+﻿/* Base nav */
 .topnav {
+    background: #0a4d3c;
+    color: white;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
-    background-color: #0a4d3c;
-    color: white;
-    width: 100%;
-    box-sizing: border-box;
     position: relative;
-    z-index: 2000; /* ensure nav is always clickable */
 }
 
     .topnav a {
@@ -23,14 +17,10 @@
 
 /* Brand */
 .brand a {
-    margin-right: 2rem;
     font-size: 1.25rem;
 }
 
-/* ========================= */
-/* DESKTOP NAV */
-/* ========================= */
-
+/* Desktop nav */
 .nav-links {
     list-style: none;
     display: flex;
@@ -47,125 +37,57 @@
     color: #fff !important;
 }
 
-/* ========================= */
-/* HAMBURGER ICON */
-/* ========================= */
-
-.hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none; /* hidden on desktop */
-    flex-direction: column;
-    gap: 4px;
-}
-
-    .hamburger .bar {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        border-radius: 2px;
-    }
-
-/* ========================= */
-/* MOBILE DRAWER */
-/* ========================= */
-
-.mobile-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 260px;
-    height: 100%;
-    background-color: #0a4d3c;
-    padding-top: 4rem;
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    /* Prevent blocking clicks when closed */
-    pointer-events: none;
-    /* Move fully off-screen */
-    transform: translateX(260px);
-}
-
-    .mobile-drawer.open {
-        transform: translateX(0);
-        pointer-events: auto; /* clickable only when open */
-    }
-
-    .mobile-drawer ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .mobile-drawer li {
-        padding: 1rem 1.5rem;
-    }
-
-    .mobile-drawer a {
-        color: white;
-        font-size: 1.1rem;
-    }
-
-/* ========================= */
-/* RESPONSIVE BEHAVIOR */
-/* ========================= */
-
-.desktop-only {
-    display: flex;
-}
-
-.mobile-only {
+/* Hide checkbox */
+.menu-toggle {
     display: none;
 }
 
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+    }
+
+/* Mobile styles */
 @media (max-width: 768px) {
 
-    /* Hide desktop nav */
-    .desktop-only {
-        display: none;
-    }
-
     /* Show hamburger */
-    .mobile-only {
-        display: block;
-    }
-
-    /* Prevent overflow */
-    .topnav {
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    /* Ensure nav links don't push layout */
-    .nav-links {
-        display: none;
-    }
-
-    /* Ensure hamburger is visible */
     .hamburger {
         display: flex;
     }
-}
 
-/* ========================= */
-/* FORCE NAV LINKS WHITE */
-/* ========================= */
-
-.topnav .nav-links a,
-.topnav .nav-links a:visited,
-.topnav .nav-links a:hover,
-.topnav .nav-links a:active,
-.topnav .nav-links a:focus,
-.topnav .nav-links a.nav-link,
-.topnav .nav-links a.nav-link:visited,
-.topnav .nav-links a.nav-link:hover,
-.topnav .nav-links a.nav-link:active,
-.topnav .nav-links a.nav-link:focus,
-.topnav .nav-links a.active {
-    color: white !important;
-}
-
-    .topnav .nav-links a.active {
-        border-bottom: 2px solid white;
+    /* Stack nav vertically */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0a4d3c;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
     }
+
+        .nav-links li a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+    /* When checkbox is checked → expand menu */
+    .menu-toggle:checked ~ .nav-links {
+        max-height: 500px; /* enough to show all links */
+        transition: max-height 0.35s ease-in;
+    }
+}

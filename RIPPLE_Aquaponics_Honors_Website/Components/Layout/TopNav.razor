@@ -3,8 +3,17 @@
         <a href="/">RIPPLE</a>
     </div>
 
-    <!-- Desktop Navigation -->
-    <ul class="nav-links desktop-only">
+    <!-- Hidden checkbox controls menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <!-- Label acts as hamburger -->
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <ul class="nav-links">
         <li><NavLink href="/about">About</NavLink></li>
         <li><NavLink href="/aquaponics">Aquaponics</NavLink></li>
         <li><NavLink href="/facility">Our Facility</NavLink></li>
@@ -14,34 +23,4 @@
         <li><NavLink href="/contact">Contact</NavLink></li>
         <li><NavLink href="/donate" class="donate-btn">Donate</NavLink></li>
     </ul>
-
-    <!-- Hamburger Icon (mobile only) -->
-    <button class="hamburger mobile-only" @onclick="ToggleMenu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </button>
 </nav>
-
-<!-- Mobile Drawer -->
-<div class="mobile-drawer @(isMenuOpen ? "open" : "")">
-    <ul>
-        <li><NavLink href="/about" @onclick="ToggleMenu">About</NavLink></li>
-        <li><NavLink href="/aquaponics" @onclick="ToggleMenu">Aquaponics</NavLink></li>
-        <li><NavLink href="/facility" @onclick="ToggleMenu">Our Facility</NavLink></li>
-        <li><NavLink href="/impact" @onclick="ToggleMenu">Impact</NavLink></li>
-        <li><NavLink href="/get-involved" @onclick="ToggleMenu">Get Involved</NavLink></li>
-        <li><NavLink href="/faq" @onclick="ToggleMenu">FAQ</NavLink></li>
-        <li><NavLink href="/contact" @onclick="ToggleMenu">Contact</NavLink></li>
-        <li><NavLink href="/donate" class="donate-btn" @onclick="ToggleMenu">Donate</NavLink></li>
-    </ul>
-</div>
-
-@code {
-    private bool isMenuOpen = false;
-
-    private void ToggleMenu()
-    {
-        isMenuOpen = !isMenuOpen;
-    }
-}
