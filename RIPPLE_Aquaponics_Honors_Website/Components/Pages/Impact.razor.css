@@ -113,12 +113,11 @@ section {
 }
 
 /* ========================= */
-/* SDG CLICK-TO-FLIP CARDS */
+/* SDG CLICK-TO-FLIP CARDS (AUTO HEIGHT) */
 /* ========================= */
 
 .flip-card {
     width: 100%;
-    height: 260px;
     perspective: 1000px;
     position: relative;
 }
@@ -132,7 +131,6 @@ section {
 .flip-card-label {
     display: block;
     width: 100%;
-    height: 100%;
     cursor: pointer;
 }
 
@@ -140,7 +138,6 @@ section {
 .flip-card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
     transition: transform 0.7s ease;
     transform-style: preserve-3d;
 }
@@ -153,9 +150,8 @@ section {
 /* FRONT + BACK */
 .flip-card-front,
 .flip-card-back {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
     padding: 1.5rem;
@@ -204,10 +200,6 @@ section {
     }
 
     /* Disable flipping on mobile */
-    .flip-card {
-        height: auto;
-    }
-
     .flip-card-inner {
         transform: none !important;
     }
