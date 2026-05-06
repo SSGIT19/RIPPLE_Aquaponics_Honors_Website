@@ -1,13 +1,4 @@
-﻿@code {
-    private bool isMenuOpen = false;
-
-    private void ToggleMenu()
-    {
-        isMenuOpen = !isMenuOpen;
-    }
-}
-
-<nav class="topnav">
+﻿<nav class="topnav">
     <div class="brand">
         <a href="/">RIPPLE</a>
     </div>
@@ -45,3 +36,12 @@
         <li><NavLink href="/donate" class="donate-btn" @onclick="ToggleMenu">Donate</NavLink></li>
     </ul>
 </div>
+
+@code {
+    private bool isMenuOpen = false;
+
+    private void ToggleMenu()
+    {
+        isMenuOpen = !isMenuOpen;
+    }
+}
