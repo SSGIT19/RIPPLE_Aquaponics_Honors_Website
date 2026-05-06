@@ -73,27 +73,49 @@ section {
     }
 
 /* ========================= */
-/* ICON LISTS */
+/* MISSION ICON LIST — UPGRADED */
 /* ========================= */
+
 .icon-list {
     list-style: none;
     padding: 0;
-    max-width: 800px;
-    margin: 2rem auto;
+    max-width: 900px;
+    margin: 2.5rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
     .icon-list li {
-        margin: 0.75rem 0;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        text-align: center;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        border-left: 6px solid #3a7ca5; /* blue accent */
     }
 
+        .icon-list li:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        }
+
         .icon-list li i {
-            margin-right: 0.5rem;
+            font-size: 1.8rem;
             color: #0b3d2e; /* dark green */
-            width: 1.2rem;
-            display: inline-block;
+            margin-top: 0.2rem;
+            width: 2rem;
+            text-align: center;
+        }
+
+        .icon-list li p {
+            margin: 0;
+            line-height: 1.5;
+            color: #333;
         }
 
 /* ========================= */
@@ -104,11 +126,61 @@ section {
 }
 
 /* ========================= */
+/* CORE VALUES – CARD GRID */
+/* ========================= */
+
+.core-values {
+    background: #e8f2f8; /* pale blue */
+    padding: 4rem 0;
+}
+
+    .core-values h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.value-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-left: 6px solid #e67e73; /* coral accent */
+}
+
+    .value-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+.value-icon {
+    font-size: 2rem;
+    color: #0b3d2e;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    margin-bottom: 0.5rem;
+    color: #0b3d2e;
+}
+
+.value-card p {
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ========================= */
 /* MOBILE RESPONSIVENESS */
 /* ========================= */
 @media (max-width: 600px) {
 
-    /* Reduce large hero text */
     .hero h1 {
         font-size: 2rem;
     }
@@ -118,26 +190,23 @@ section {
         padding: 0 0.5rem;
     }
 
-    /* Improve paragraph readability */
     .section-inner p {
         text-align: left;
         font-size: 1rem;
     }
 
-    /* Improve icon list layout */
-    .icon-list li {
-        text-align: left;
-        display: flex;
-        align-items: flex-start;
-        gap: 0.5rem;
-        font-size: 1rem;
+    .icon-list {
+        grid-template-columns: 1fr;
     }
 
-        .icon-list li i {
-            margin-top: 0.2rem;
-        }
+    .value-card {
+        padding: 1.5rem;
+    }
 
-    /* Reduce section padding so mobile isn't too tall */
+    .value-icon {
+        font-size: 1.8rem;
+    }
+
     section {
         padding: 2.5rem 0;
     }
