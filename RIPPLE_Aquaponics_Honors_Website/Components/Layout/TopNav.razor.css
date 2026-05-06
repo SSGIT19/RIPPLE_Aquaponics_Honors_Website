@@ -104,3 +104,10 @@
         transition: max-height 0.35s ease-in;
     }
 }
+
+/* Make all nav links white on desktop + mobile */
+.topnav a,
+.nav-links a,
+.nav-links li a {
+    color: white !important;
+}
