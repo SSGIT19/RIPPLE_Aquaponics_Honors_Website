@@ -8,7 +8,7 @@ section {
 .section-inner {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem; /* FIX: reduce padding to prevent right drift */
 }
 
     /* FIX: Only center section titles */
@@ -16,7 +16,7 @@ section {
         text-align: center;
     }
 
-    /* FIX: Left-align body text for readability */
+    /* FIX: Left-align body text */
     .section-inner p {
         text-align: left;
         margin-left: auto;
@@ -56,8 +56,9 @@ section {
 }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
         margin-bottom: 1rem;
+        padding: 0 0.5rem; /* FIX: prevent right-edge drift */
     }
 
     .hero p {
@@ -65,7 +66,8 @@ section {
         max-width: 750px;
         margin: 0.5rem auto 2rem auto;
         line-height: 1.6;
-        text-align: center; /* Hero stays centered */
+        text-align: center;
+        padding: 0 0.5rem; /* FIX */
     }
 
 /* ========================= */
@@ -100,14 +102,20 @@ section {
 /* ========================= */
 @media (max-width: 600px) {
 
-    .section-inner p {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+    .section-inner {
+        padding: 0 0.75rem; /* FIX: reduce right drift */
+    }
+
+        .section-inner p {
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+
+    .hero h1 {
+        font-size: 2.3rem;
     }
 
     .icon-list li {
-        max-width: 420px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 380px; /* FIX: perfect centering */
     }
 }
