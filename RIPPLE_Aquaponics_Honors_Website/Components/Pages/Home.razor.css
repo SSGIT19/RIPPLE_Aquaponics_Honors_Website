@@ -8,14 +8,15 @@ section {
 .section-inner {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem; /* FIX: reduce padding to prevent right drift */
 }
 
-    /* FIX: Only center section titles, not all text */
+    /* FIX: Only center section titles */
     .section-inner h2 {
         text-align: center;
     }
 
+    /* FIX: Left-align body text */
     .section-inner p {
         text-align: left;
         margin-left: auto;
@@ -50,8 +51,9 @@ section {
 }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
         margin-bottom: 1rem;
+        padding: 0 0.5rem; /* FIX: prevent right cutoff */
     }
 
     .hero p {
@@ -59,7 +61,8 @@ section {
         max-width: 750px;
         margin: 0.5rem auto 2rem auto;
         line-height: 1.6;
-        text-align: center; /* Hero stays centered */
+        text-align: center;
+        padding: 0 0.5rem; /* FIX */
     }
 
 .hero-buttons {
@@ -80,7 +83,6 @@ section {
     transition: 0.2s ease;
 }
 
-    /* Primary */
     .btn.primary {
         background: #0b3d2e;
         color: white;
@@ -92,7 +94,6 @@ section {
             color: #0b3d2e;
         }
 
-    /* Secondary */
     .btn.secondary {
         background: white;
         color: #0b3d2e;
@@ -104,7 +105,6 @@ section {
             color: white;
         }
 
-    /* Donate */
     .btn.donate {
         background: #e67e73;
         color: white;
@@ -122,6 +122,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
+    justify-items: center; /* FIX: centers cards */
 }
 
 .step {
@@ -129,7 +130,9 @@ section {
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 5px solid #e67e73;
-    text-align: left; /* FIX: prevents drift */
+    text-align: left;
+    width: 100%;
+    max-width: 420px; /* FIX: prevents drift */
 }
 
     .step h3 {
@@ -159,7 +162,10 @@ section {
     .benefits li {
         padding: 0.5rem 0;
         border-bottom: 1px solid rgba(255,255,255,0.2);
-        text-align: left; /* FIX: aligns icons + text */
+        text-align: left;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto; /* FIX */
     }
 
         .benefits li i {
@@ -188,6 +194,7 @@ section {
 
     .cta p {
         text-align: center;
+        padding: 0 0.5rem; /* FIX */
     }
 
 .cta-buttons {
@@ -199,49 +206,25 @@ section {
 }
 
 /* ========================= */
-/* Z-INDEX FIXES */
-/* ========================= */
-section {
-    position: relative;
-    z-index: 1;
-}
-
-.hero {
-    position: relative;
-    z-index: 10;
-}
-
-/* ========================= */
 /* MOBILE FIXES */
 /* ========================= */
 @media (max-width: 600px) {
 
-    /* Ensure cards are perfectly centered */
-    .steps {
-        padding-left: 0;
-        padding-right: 0;
+    .section-inner {
+        padding: 0 0.75rem; /* FIX: reduce right drift */
     }
 
-    .step {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        max-width: 420px; /* keeps cards centered visually */
-    }
-
-    .benefits {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-        .benefits li {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 420px;
+        .section-inner p {
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
         }
 
-    .section-inner p {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .step,
+    .benefits li {
+        max-width: 380px; /* FIX: perfect centering */
     }
 }
