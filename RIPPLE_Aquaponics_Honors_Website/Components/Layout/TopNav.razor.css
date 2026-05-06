@@ -162,3 +162,18 @@
     .topnav .nav-links a.active {
         border-bottom: 2px solid white;
     }
+
+/* Ensure nav is always clickable */
+.topnav {
+    position: relative;
+    z-index: 2000;
+}
+
+/* Prevent drawer from blocking hamburger when closed */
+.mobile-drawer {
+    pointer-events: none;
+}
+
+    .mobile-drawer.open {
+        pointer-events: auto;
+    }
