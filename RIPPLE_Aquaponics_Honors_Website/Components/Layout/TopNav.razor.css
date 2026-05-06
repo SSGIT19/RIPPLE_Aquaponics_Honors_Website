@@ -91,3 +91,14 @@
         transition: max-height 0.35s ease-in;
     }
 }
+
+/* Make sure nav and dropdown sit above all page content */
+.topnav {
+    position: relative;
+    z-index: 9999;
+}
+
+.nav-links {
+    position: relative;
+    z-index: 9999;
+}
