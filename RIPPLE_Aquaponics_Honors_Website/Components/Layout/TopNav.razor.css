@@ -1,4 +1,7 @@
-﻿/* Base nav */
+﻿/* ========================= */
+/* BASE NAV */
+/* ========================= */
+
 .topnav {
     background: #0a4d3c;
     color: white;
@@ -7,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 9999; /* stays above hero */
 }
 
     .topnav a {
@@ -51,21 +55,23 @@
 }
 
     .hamburger span {
-        width: 25px;
+        width: 28px;
         height: 3px;
         background: white;
         border-radius: 2px;
     }
 
-/* Mobile styles */
+/* ========================= */
+/* MOBILE LAYOUT */
+/* ========================= */
+
 @media (max-width: 768px) {
 
-    /* Show hamburger */
+    /* Show hamburger, hide desktop links */
     .hamburger {
         display: flex;
     }
 
-    /* Stack nav vertically */
     .nav-links {
         position: absolute;
         top: 100%;
@@ -77,6 +83,8 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.35s ease-out;
+        padding: 0;
+        z-index: 9999;
     }
 
         .nav-links li a {
@@ -85,20 +93,14 @@
             border-bottom: 1px solid rgba(255,255,255,0.2);
         }
 
-    /* When checkbox is checked → expand menu */
+    /* Hide desktop links */
+    .nav-links {
+        display: flex;
+    }
+
+    /* Expand dropdown when checked */
     .menu-toggle:checked ~ .nav-links {
-        max-height: 500px; /* enough to show all links */
+        max-height: 600px;
         transition: max-height 0.35s ease-in;
     }
-}
-
-/* Make sure nav and dropdown sit above all page content */
-.topnav {
-    position: relative;
-    z-index: 9999;
-}
-
-.nav-links {
-    position: relative;
-    z-index: 9999;
 }
