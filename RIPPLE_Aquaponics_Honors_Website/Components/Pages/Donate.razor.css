@@ -89,12 +89,18 @@ section {
         text-align: center;
     }
 
+        /* Default icon color (light backgrounds) */
         .icon-list li i {
             margin-right: 0.5rem;
             color: #0b3d2e;
             width: 1.2rem;
             display: inline-block;
         }
+
+/* FIX: Icons inside dark green sections become white */
+.why-aquaponics .icon-list li i {
+    color: white;
+}
 
 /* ========================= */
 /* DONATE CARD */
